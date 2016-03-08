@@ -1,6 +1,7 @@
-<h1> 2 Shares </h1>
+<h1> <%= pluralize(@shares.size, "Share") %> </h1>
 
 <ul>
-<li> Share1</li>
-<li> Share2</li>
+<% @shares.each do |share| %>
+	<li>  <%=share %></li>
+<%end%>
 </ul>
