@@ -1,4 +1,5 @@
 require "spec_helper"
+require "rails_helper"
 
 describe "Vieweing the list of shares" do
 	it "lists all the share details entered" do
