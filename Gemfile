@@ -46,7 +46,7 @@ group :development do
   gem 'spring'
 end
 
-group :test do
+	group :test do
   gem "capybara", "2.6.2"
 end
 
