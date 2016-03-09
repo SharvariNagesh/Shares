@@ -1,7 +1,7 @@
 class SharesController < ApplicationController
 
   def index
-  	@shares = ['Share1', 'Share2']
+  	@shares = Share.all
 
   end
 end
