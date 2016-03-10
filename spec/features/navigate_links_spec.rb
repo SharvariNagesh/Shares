@@ -50,7 +50,7 @@ it "allows navigation from listing page to the detailed page " do
 
     visit shares_url
     click_link share1.name
-    expect(current_path).to eq(share_path(share))
+    expect(current_path).to eq(share_path(share1))
 
   end
 
