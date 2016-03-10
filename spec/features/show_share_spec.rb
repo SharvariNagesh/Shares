@@ -26,7 +26,7 @@ describe "Vieweing details of a share" do
                       description: "Colgate is in the Personal Care sector. The current market capitalisation stands at Rs 22,474.17 crore.",
                       price_to_book_value: 29.18)
 
-    visit "http://localhost:3000/shares/#{share1.id}"
+    visit share_url(share1)
 		
 		expect(page).to have_text(share1.name)
 		expect(page).to have_text(share1.book_value)

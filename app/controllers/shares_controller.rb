@@ -4,4 +4,8 @@ class SharesController < ApplicationController
   	@shares = Share.all
 
   end
+
+  def show
+  	@share = Share.find(params[:id])
+  end
 end
