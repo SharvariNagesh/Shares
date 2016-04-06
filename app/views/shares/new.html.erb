@@ -1,0 +1,15 @@
+
+<h1>Enter a Money control URL to pull the data : </h1>
+
+<%= form_for(@share)	 do |f| %>
+  <p>
+    <li class="required">
+         <%= f.label :url %>
+        <%= f.text_field :url, autofocus: true %>
+        
+    </li>
+  </p>
+   <p>
+    <%= f.submit 'Pull the data'%>
+  </p>
+<% end %>
