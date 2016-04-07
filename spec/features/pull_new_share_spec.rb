@@ -21,7 +21,8 @@ describe "Pulling a new share" do
         puts "waking..."
     	expect(current_path).to eq(shares_path)
     	expect(page).to have_text("Nestle")
-        expect(page).to have_text("Sector: FOOD PROCESSING")
+        expect(page).to have_text("Sector:")
+        expect(page.to have_text("FOOD PROCESSING")
 
     end
 end
