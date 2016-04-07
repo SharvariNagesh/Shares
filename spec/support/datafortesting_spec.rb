@@ -14,3 +14,13 @@ def shares_data(overrides={})
 
 }.merge(overrides)
 end
+
+
+def review_attributes(overrides={})
+{
+    priority: 2,
+    comment: "Operating profit margin is reducing.",
+   
+
+}.merge(overrides)
+end
