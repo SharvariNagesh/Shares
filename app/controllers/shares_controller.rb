@@ -25,7 +25,7 @@ class SharesController < ApplicationController
     @share_details = readShareBasic(@url)
     @shareNew.name = @share_details[:name]
     @shareNew.current_price = @share_details[:current_price]
-  #  @shareNew.sector=@share_details[:sector]
+    @shareNew.sector=@share_details[:sector]
     @shareNew.description=@share_details[:description]
     @shareNew.year_low=@share_details[:year_low]
     @shareNew.year_high=@share_details[:year_high]

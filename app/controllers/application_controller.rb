@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
    parameterHash[:name]=page.css("div#nChrtPrc div[class='b_42 PT5'] h1.b_42").text
    parameterHash[:current_price] = current_price
    parameterHash[:sector] = page.css("div#nChrtPrc div[class='FL gry10'] a.gry10").text
-   parameterHash[:description] = page.css("div.pc_abtinfo p")
+   parameterHash[:description] = page.css("div.pc_abtinfo p").text
    
    parameterHash[:year_low] = page.css("span#b_52low.PR5").text
    parameterHash[:year_high] = page.css("span#b_52high.PL5").text
