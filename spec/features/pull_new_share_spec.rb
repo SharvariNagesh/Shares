@@ -22,7 +22,7 @@ describe "Pulling a new share" do
     	expect(current_path).to eq(shares_path)
     	expect(page).to have_text("Nestle")
         expect(page).to have_text("Sector:")
-        expect(page.to have_text("FOOD PROCESSING")
+        expect(page).to have_text("FOOD PROCESSING")
 
     end
 end
