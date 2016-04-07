@@ -2,6 +2,7 @@
 def shares_data(overrides={})
 {
     name: "Nestle",
+    sector: "FOOD PROCESSING",
     current_price: 5304,
     year_low: 4990,
     year_high: 7499,
