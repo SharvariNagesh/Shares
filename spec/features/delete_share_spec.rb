@@ -15,7 +15,7 @@ describe "Deleting a share" do
     end
 
     it "share can have many reviews" do
-  		share = share.new(share_data)
+  		share = Share.create(shares_data)
 
   		review1 = share.reviews.new(review_attributes)
   		review2 = share.reviews.new(review_attributes(comment:"Testing.."))
@@ -25,7 +25,7 @@ describe "Deleting a share" do
 	end
 
 	it "deleting a share deletes associated reviews" do
-  		share = share.create(share_data)
+  		share = Share.create(shares_data)
 
   		share.reviews.create(review_attributes)
 

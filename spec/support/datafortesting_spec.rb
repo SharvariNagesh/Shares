@@ -18,10 +18,9 @@ end
 
 def review_attributes(overrides={})
 {
-    name: "S"
+    name: "S",
     priority: 2,
     comment: "Operating profit margin is reducing.",
    
-
 }.merge(overrides)
 end
