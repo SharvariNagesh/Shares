@@ -18,6 +18,7 @@ end
 
 def review_attributes(overrides={})
 {
+    name: "S"
     priority: 2,
     comment: "Operating profit margin is reducing.",
    

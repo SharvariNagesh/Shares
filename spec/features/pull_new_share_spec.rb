@@ -17,7 +17,7 @@ describe "Pulling a new share" do
     	click_button('Pull the data')
 
         puts "sleeping..."
-        sleep(30.seconds)
+        sleep(20.seconds)
         puts "waking..."
     	expect(current_path).to eq(shares_path)
     	expect(page).to have_text("Nestle")

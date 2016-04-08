@@ -20,7 +20,7 @@ class SharesController < ApplicationController
   end
 
   def create
-     @url = params[:share][:url]
+    @url = params[:share][:url]
     @shareNew = Share.new(share_params)
     @share_details = readShareBasic(@url)
     @shareNew.name = @share_details[:name]
