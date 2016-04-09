@@ -10,7 +10,7 @@ describe "Navigating to reviews" do
     visit share_url(share1)
 
     click_link "Reviews"
-    expect(current_path).to eq(share_reviews_url(share1))
+    expect(current_path).to eq(share_reviews_path(share1))
     expect(page).to have_text(review1.comment)
   end
 end
