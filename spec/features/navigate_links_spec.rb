@@ -1,3 +1,6 @@
+require "spec_helper"
+require "rails_helper"
+
 describe "Navigation between pages" do
 	it "allows navigation from detailed page to the listing page" do
 		
@@ -10,7 +13,6 @@ describe "Navigation between pages" do
 
   end
 it "allows navigation from listing page to the detailed page " do
-    
    
     share1 = Share.create(shares_data)
 

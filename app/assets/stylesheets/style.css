@@ -160,6 +160,12 @@ input.submit { width: 28px; height: 20px; font-weight: bold; border: none; backg
 	font: bold 2em Arial, sans-serif;
 }
 
+.priority3 h2 {
+	background-color: #FFF;
+	padding: 5px 0 5px 0;
+	color: #46574D;
+	font: bold 2em Arial, sans-serif;
+}
 
 .date { 
 	color: #46574D; 
