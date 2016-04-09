@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :reviews
+  
   root "shares#index"
-  resources :shares
+  resources :shares do
+  	resources :reviews
+  end
 end

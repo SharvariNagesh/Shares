@@ -1,0 +1,23 @@
+ <header id="content-header">
+  <h1>Reviews for <%= link_to(@share.name, @share) %></h1>
+</header>
+<% if @reviews.size ==0 	%>
+	<p> There are no reviews for the share yet </p>
+<% else%>
+
+  <% @reviews.each do |review| %>
+    <li>
+      <span class="review">
+      	<% review.priority.times do %>
+      		*
+      	<% end %>
+      </span>
+      <span class="user">by <%= review.name %></span>
+      <span class="date">(<%= time_ago_in_words(review.created_at) %> ago)</span>
+      <span>
+      <p>
+        <h2>&quot;<%= review.comment %>&quot;</h2>
+      </p></span>
+      <% end %>
+</li>
+<%end%>
