@@ -33,4 +33,11 @@ class ApplicationController < ActionController::Base
    
    return parameterHash
    end
+
+   def sanitize_website(website)
+    unless website.include?("http://") || website.include?("https://")
+      website = "http://" + website
+    end
+    return website
+  end
 end

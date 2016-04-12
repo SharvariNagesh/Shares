@@ -19,20 +19,22 @@ describe "Vieweing details of a share" do
 
 	it "Contains reviews for the share" do
 		share1 = Share.create(shares_data)
-		review1 = share1.reviews.new(review_attributes)
-		review2 = share1.reviews.new(review_attributes(priority:3))
-    	visit share_url(share1)
+		review1 = share1.reviews.create(review_attributes)
+
+		review2 = share1.reviews.create(review_attributes(priority:3))
+    	visit share_path(share1)
+    	expect(page).to have_text("Top Comment")
     	expect(page).to have_text(review1.comment)
 		expect(page).to have_text(review2.comment)
 	end
 
 	it "Contains top 3 reviews sorted with priority" do
 		share1 = Share.create(shares_data)
-		review1 = share1.reviews.new(review_attributes(priority:1))
-		review2 = share1.reviews.new(review_attributes(priority:1))
-		review3 = share1.reviews.new(review_attributes(priority:1))
-		review4 = share1.reviews.new(review_attributes(priority:3))
-    	visit share_url(share1)
+		review1 = share1.reviews.create(review_attributes(priority:1))
+		review2 = share1.reviews.create(review_attributes(priority:1))
+		review3 = share1.reviews.create(review_attributes(priority:1))
+		review4 = share1.reviews.create(review_attributes(priority:3, comment: "Not real!"))
+    	visit share_path(share1)
     	expect(page).to have_text(review1.comment)
 		expect(page).to have_text(review2.comment)
 		expect(page).to have_text(review3.comment)

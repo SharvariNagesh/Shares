@@ -1,6 +1,3 @@
-// Place all the styles related to the Reviews controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 // Place all the styles related to the shares controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -26,15 +23,41 @@ h2 { margin: 0; padding: 0; font: normal 1.6em Arial, Sans-Serif; letter-spacing
 h1 a { color: #46574D; background: inherit; }
 h1 a, h2 a { text-decoration: none; }
 h1 a:hover, h2 a:hover { color: #BFE1ED; background: inherit; }
-h3 { font: 90% Arial, Sans-Serif; margin: 0 0 10px 0; padding: 0; color: #46574D; background: #FFF; }
+h3 { font: 9
+0% Arial, Sans-Serif; margin: 0 0 12px 0; padding: 0; color: #46574D; background: #FFF; }
 p {	margin: 0 0 0px 0; line-height: 1.5em; }
+
 form { margin: 0; }
 
 input.search { width: 122px; height: 15px; border: 1px dashed #46574D; background: #FFF url(input.jpg) no-repeat; padding: 3px; color: #616161; }
 input.submit { width: 28px; height: 20px; font-weight: bold; border: none; background: #FFF; padding: 3px; color: #616161; }
 
 
+div{
 
+ .priority1 
+ {
+    background-color:#8da595;
+    color:Black;
+    margin:5px;
+    padding:5px;
+  }
+
+  .priority2
+  {
+    background-color:#d4ddd7;
+    color:Black;
+    margin:5px;
+    padding:5px;
+  }
+  .priority3
+  {
+    background-color:#f1f4f2;
+    color:Black;
+    margin:5px;
+    padding:5px;
+  }
+} 
 .content { 
 	position: absolute;
 	height: 100%;
@@ -160,9 +183,15 @@ input.submit { width: 28px; height: 20px; font-weight: bold; border: none; backg
 	background-color: #FFF;
 	padding: 5px 0 5px 0;
 	color: #46574D;
-	font: bold 1.6em Arial, sans-serif;
+	font: bold 2em Arial, sans-serif;
 }
 
+.priority3 h2 {
+	background-color: #FFF;
+	padding: 5px 0 5px 0;
+	color: #46574D;
+	font: bold 2em Arial, sans-serif;
+}
 
 .date { 
 	color: #46574D; 
@@ -170,7 +199,7 @@ input.submit { width: 28px; height: 20px; font-weight: bold; border: none; backg
 	text-align: right; 
 	margin: 10px 0 5px 0; 
 	padding: 0.4em 0 0 0; 
-	border-top: 1px solid #eee;
+	border-top: 1.6px solid #eee;
 }
 
 input.button { 

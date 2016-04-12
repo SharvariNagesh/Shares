@@ -7,6 +7,8 @@ class SharesController < ApplicationController
 
   def show
   	@share = Share.find(params[:id])
+    @reviews = @share.reviews.order(priority: :asc).limit(3)
+
   end
 
   def destroy
@@ -20,7 +22,7 @@ class SharesController < ApplicationController
   end
 
   def create
-    @url = params[:share][:url]
+    @url = sanitize_website(params[:share][:url])
     @shareNew = Share.new(share_params)
     @share_details = readShareBasic(@url)
     @shareNew.name = @share_details[:name]
@@ -38,6 +40,15 @@ class SharesController < ApplicationController
   end
 
 private
+
+  def sanitize_website(website)
+    unless website.include?("http://") || website.include?("https://")
+      website = "http://" + website
+    end
+    return website
+  end
+
+
   def share_params
     params.require(:share).permit( :name, :current_price, :year_low, :year_high, :current_PE_ratio, :market_cap, :book_value, :description, :price_to_book_value)
   end 

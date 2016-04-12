@@ -1,0 +1,16 @@
+<% if @reviews.size ==0 	%>
+	<p> There are no reviews for the share yet </p>
+<% else%>
+  <ul>
+    <% @reviews.each do |review| %>
+      <li>
+        <div class=<%= 'priority' + review.priority.to_s %> >
+          <%= review.name %>
+          (<%= time_ago_in_words(review.created_at)  %> ago) -
+           &quot;<%= review.comment %>&quot;
+        </div>
+      </li>
+    <% end %>
+    
+  </ul>
+<%end%>

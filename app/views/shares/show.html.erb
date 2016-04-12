@@ -42,8 +42,16 @@
           </tr>
     
         </table>
+        <% unless @reviews.empty? %>
+        <br>
+           <h3> <strong>Top Comments for <%=@share.name %> </strong></h3>
+          <%= render 'reviews_display'  %>
+
+        <%end %>
     </article>
-    <%= link_to "Reviews", share_reviews_path(@share) %>
+
+
+    <%= link_to " All Reviews", share_reviews_path(@share) %>
 
     <%=   link_to "All Shares", shares_path %>
     <%=   link_to "Delete", share_path(@share), method: :delete, data:{confirm: 'Are you Sure?'} %>
