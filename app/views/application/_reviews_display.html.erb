@@ -3,13 +3,15 @@
 <% else%>
   <ul>
     <% @reviews.each do |review| %>
-      <li>
+      
         <div class=<%= 'priority' + review.priority.to_s %> >
+          <li>
           <%= review.name %>
           (<%= time_ago_in_words(review.created_at)  %> ago) -
            &quot;<%= review.comment %>&quot;
+          </li>
         </div>
-      </li>
+  
     <% end %>
     
   </ul>
