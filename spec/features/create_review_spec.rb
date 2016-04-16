@@ -6,60 +6,65 @@ describe "Creating a new review" do
 
     visit share_url(share1)
 
-    fill_in "Name", with: "Robin"
+   
     select 1, :from => "review_priority"
     fill_in "Comment", with: "I love this share!"
-
+    fill_in "review_name", with: "Robin"
     click_button 'Post Review'
 
+    expect(page).to have_text("Review saved!")
+   
     expect(current_path).to eq(share_reviews_path(share1))
 
     expect(page).to have_text("I love this share!")
-    expect(page).to have_text("Review saved!")
+    
   end
 
   it "allows writing reviews from reviews page" do
    
     share1 = Share.create(shares_data)
-    visit share_reviews_url(share1)
-    fill_in "Name", with: "Robin"
+    visit share_reviews_path(share1)
+    
     select 1, :from => "review_priority"
     fill_in "Comment", with: "I love this share!"
-
+    fill_in "review_name", with: "Robin"
     click_button 'Post Review'
+
+    expect(page).to have_text("Review saved!")
 
     expect(current_path).to eq(share_reviews_path(share1))
 
     expect(page).to have_text("I love this share!")
-    expect(page).to have_text("Review saved!")
+    
 
     expect {
       click_button 'Post Review'
     }.not_to change(Review, :count)
 
-    expect(page).to have_text('error')
+    
   end
 
   it " does not allow writing invalid reviews from reviews page" do
    
     share1 = Share.create(shares_data)
     visit share_reviews_url(share1)
-    fill_in "Name", with: "Robin"
+    
     select 1, :from => "review_priority"
     fill_in "Comment", with: ""
+    fill_in "review_name", with: "Robin"
 
     expect {
       click_button 'Post Review'
     }.not_to change(Review, :count)
 
-    expect(page).to have_text('error')
+    expect(page).to have_text('Error')
   end
 
   it " does not allow writing invalid reviews from share page" do
    
     share1 = Share.create(shares_data)
     visit share_url(share1)
-    fill_in "Name", with: "Robin"
+    fill_in "review_name", with: "Robin"
     select 1, :from => "review_priority"
     fill_in "Comment", with: ""
 
@@ -67,7 +72,7 @@ describe "Creating a new review" do
       click_button 'Post Review'
     }.not_to change(Review, :count)
 
-    expect(page).to have_text('error')
+    expect(page).to have_text('Error')
   end
 
 end

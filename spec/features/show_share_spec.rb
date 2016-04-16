@@ -23,7 +23,7 @@ describe "Vieweing details of a share" do
 
 		review2 = share1.reviews.create(review_attributes(priority:3))
     	visit share_path(share1)
-    	expect(page).to have_text("Top Comment")
+    	expect(page).to have_text("Top review")
     	expect(page).to have_text(review1.comment)
 		expect(page).to have_text(review2.comment)
 	end

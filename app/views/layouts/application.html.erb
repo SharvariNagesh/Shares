@@ -11,6 +11,7 @@
 
 </head>
 <body>
+
 <div class="content">
 		
 	<%=render 'layouts/header' %>
@@ -19,7 +20,7 @@
 			
 			<div class="sd_left">
 				<div class="text_padding">	
-			
+					<%= render "layouts/flash" %>
 					<%= yield %>
 				</div>
 			</div>

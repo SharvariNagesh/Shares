@@ -7,6 +7,7 @@ By Herreman David
 http://www.free-css-templates.com
 StyleSheet for BinaryNews Template
 */
+@import "colors";
 
 html, body {height: 100%;}
 body {
@@ -34,10 +35,22 @@ input.submit { width: 28px; height: 20px; font-weight: bold; border: none; backg
 
 
 div{
+ .comment
+	{
+		border-style: ridge;
+		border-width:1px 4px;
+		width: 90%;
+		padding-top: 5px;
+    	padding-right: 30px;
+    	padding-bottom: 3px;
+    	padding-left: 30px;
+    	align: left;
+	}
 
  .priority1 
  {
     background-color:#8da595;
+    border-style: thin;
     color:Black;
     margin:5px;
     padding:5px;
@@ -46,6 +59,7 @@ div{
   .priority2
   {
     background-color:#d4ddd7;
+    border-style: thin;
     color:Black;
     margin:5px;
     padding:5px;
@@ -53,6 +67,7 @@ div{
   .priority3
   {
     background-color:#f1f4f2;
+    border-style: thin;
     color:Black;
     margin:5px;
     padding:5px;
@@ -238,15 +253,20 @@ input.button {
 
 .success {
 	color: #000000;
-	background: #F5FBE1;
-	padding: 7px;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	background: #ebfbe1;
+	font: bold 1.2em Arial, sans-serif;
+	text-align: center;
+	width: 70% ;
+	padding: 5px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 	border: 1px dashed #7BA813;
 }
 .success h2 {
+	text-align: center;
+	background: #ebfbe1;
 	color: #7BA813;
-	background: inherit;
+	
 }
 
 .footer { 
@@ -263,5 +283,49 @@ input.button {
 		}
 
 }
+
+/* FLASHES */
+
+.flash {
+  color: $primary-text-color;
+  font: bold 1.2em Arial, sans-serif;
+  width: 80%;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  
+  box-shadow: #ffc 0 0 4px;
+  
+  &.notice {
+    background-color: $flash-notice-color;
+    border: 1px dashed #7BA813;
+  }
+
+  &.alert {
+    background-color: $flash-alert-color;
+    border: 1px dashed #990000;
+  }
+}
+
+/* ERRORS */
+
+section#errors {
+  margin: 1em 0;
+  padding: 1em;
+  background: $errors-background-color;
+
+  h2 {
+    color: $errors-text-color;
+    font-size: 1.25em;
+  }
+
+  h3 {
+    font-size: 1em;
+    margin: .5em 0;
+    font-weight: bold;
+  }
+}
+
 
 

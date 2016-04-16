@@ -8,13 +8,13 @@ class SharesController < ApplicationController
   def show
   	@share = Share.find(params[:id])
     @reviews = @share.reviews.order(priority: :asc).limit(3)
-
+    @newReview = @share.reviews.new
   end
 
   def destroy
   	@share = Share.find(params[:id])
   	@share.destroy
-  	redirect_to shares_url
+  	redirect_to shares_url, alert: "Share successfully deleted!"
   end
 
   def new

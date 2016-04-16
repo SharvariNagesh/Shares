@@ -1,0 +1,36 @@
+    
+          <ul>
+            <table class="comment">
+              <% unless @reviews.blank? %>
+
+               <% @reviews.each do |review| %>
+                <tr>
+                  <th colspan=2 class=<%= 'priority' + review.priority.to_s %> align=left>
+                    <li>&quot;<%= review.comment %>&quot; 
+                      -- <%= review.name %> (<%= time_ago_in_words(review.created_at)  %> ago) 
+                          
+                    </li>      
+                  </th>
+                </tr>
+               <% end %>
+              <% end %>
+              <br>
+              
+               
+                  <tr> <th colspan=4 align=center> Add a new Review : </th></tr>
+                  <tr> <td>
+                    <%= form_for([@share,@newReview])   do |f| %>
+                        
+                         <strong> <padding=5><%= f.label :full_name %> :</padding></strong>
+                          <%= f.text_field :name, autofocus: true %>
+                        
+                          <strong><%= f.label :priority %> :</strong>
+                          <%= f.select :priority, Review::PRIORITY, prompt: "Pick one" %> <br>
+                          <strong><%= f.label :comment %> :</strong>
+                          <%= f.text_area :comment, cols: 80 %><br>
+                          <%= f.submit 'Post Review'%>
+                   <% end %>
+                  </td></tr> 
+            </table>
+          </ul>
+          
