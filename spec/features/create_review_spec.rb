@@ -10,7 +10,7 @@ describe "Creating a new review" do
     select 1, :from => "review_priority"
     fill_in "Comment", with: "I love this share!"
     fill_in "review_name", with: "Robin"
-    click_button 'Post Review'
+    click_button 'Create Review'
 
     expect(page).to have_text("Review saved!")
    
@@ -28,7 +28,7 @@ describe "Creating a new review" do
     select 1, :from => "review_priority"
     fill_in "Comment", with: "I love this share!"
     fill_in "review_name", with: "Robin"
-    click_button 'Post Review'
+    click_button 'Create Review'
 
     expect(page).to have_text("Review saved!")
 
@@ -38,7 +38,7 @@ describe "Creating a new review" do
     
 
     expect {
-      click_button 'Post Review'
+      click_button 'Create Review'
     }.not_to change(Review, :count)
 
     
@@ -54,7 +54,7 @@ describe "Creating a new review" do
     fill_in "review_name", with: "Robin"
 
     expect {
-      click_button 'Post Review'
+      click_button 'Create Review'
     }.not_to change(Review, :count)
 
     expect(page).to have_text('Error')
@@ -69,7 +69,7 @@ describe "Creating a new review" do
     fill_in "Comment", with: ""
 
     expect {
-      click_button 'Post Review'
+      click_button 'Create Review'
     }.not_to change(Review, :count)
 
     expect(page).to have_text('Error')

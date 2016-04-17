@@ -8,7 +8,7 @@ class SharesController < ApplicationController
   def show
   	@share = Share.find(params[:id])
     @reviews = @share.reviews.order(priority: :asc).limit(3)
-    @newReview = @share.reviews.new
+    @reviewToAlter = @share.reviews.new
   end
 
   def destroy

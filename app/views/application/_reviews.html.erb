@@ -5,14 +5,15 @@
 
                <% @reviews.each do |review| %>
                 <tr>
-                  <th colspan=2 class=<%= 'priority' + review.priority.to_s %> align=left>
+                  <th class=<%= 'priority' + review.priority.to_s %> align=left>
                     <li>&quot;<%= review.comment %>&quot; 
                       -- <%= review.name %> (<%= time_ago_in_words(review.created_at)  %> ago) 
                           
                     </li>      
                   </th>
+
                   <td>
-                    
+                      <%= link_to image_tag("edit.jpeg", alt: "Edit_#{review.id} ", width:30, height:30 , :border => 0), edit_share_review_path(@share,review) %>  
                   </td>
                 </tr>
                <% end %>
@@ -22,7 +23,7 @@
                
                   <tr> <th colspan=4 align=center> Add a new Review : </th></tr>
                   <tr> <td>
-                    <%= form_for([@share,@newReview])   do |f| %>
+                    <%= form_for([@share,@reviewToAlter])   do |f| %>
                         
                          <strong> <padding=5><%= f.label :full_name %> :</padding></strong>
                           <%= f.text_field :name, autofocus: true %>
@@ -31,7 +32,7 @@
                           <%= f.select :priority, Review::PRIORITY, prompt: "Pick one" %> <br>
                           <strong><%= f.label :comment %> :</strong>
                           <%= f.text_area :comment, cols: 80 %><br>
-                          <%= f.submit 'Post Review'%>
+                          <%= f.submit %>
                    <% end %>
                   </td></tr> 
             </table>

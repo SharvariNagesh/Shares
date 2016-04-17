@@ -4,20 +4,38 @@ class ReviewsController < ApplicationController
 	
 	def index
 		@reviews = @share.reviews.order(priority: :asc)
-		@newReview = @share.reviews.new
+		@reviewToAlter = @share.reviews.new
 	end
 
 	def create
 		@reviews = @share.reviews.order(priority: :asc)
-		@newReview = @share.reviews.new(review_params)
+		@reviewToAlter = @share.reviews.new(review_params)
 		
-		if @newReview.save
+		if @reviewToAlter.save
 			redirect_to share_reviews_path(@share), notice: "Review saved!"
 		else
-			flash[:alert] = "Error : #{@newReview.errors.full_messages.to_sentence}"
+			flash[:alert] = "Error : #{@reviewToAlter.errors.full_messages.to_sentence}"
 			render :index
 		end
 	end
+
+	def edit
+		@reviews = @share.reviews.order(priority: :asc)
+		@reviewToAlter = Review.find(params[:id])
+	end
+
+	def update
+		@reviews = @share.reviews.order(priority: :asc)
+		@reviewToAlter = Review.find(params[:id])
+		@review = Review.find(params[:id])
+		if @review.update(review_params)
+			redirect_to share_reviews_path(@share), notice: 'Review successfully updated!'
+		else
+			flash[:alert] = "Error : #{@review.errors.full_messages.to_sentence}"
+			render :edit
+		end
+	end
+
 
 
  private
