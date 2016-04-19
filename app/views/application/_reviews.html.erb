@@ -1,11 +1,14 @@
     
           <ul>
+            <% if @reviews.blank?%>
+              <p class="message">There are no reviews for <%=@share.name %>.</p>
+            <%end %>
             <table class="comment">
               <% unless @reviews.blank? %>
 
                <% @reviews.each do |review| %>
                 <tr>
-                  <th class=<%= 'priority' + review.priority.to_s %> align=left>
+                  <th colspan=4 class=<%= 'priority' + review.priority.to_s %> align=left>
                     <li>&quot;<%= review.comment %>&quot; 
                       -- <%= review.name %> (<%= time_ago_in_words(review.created_at)  %> ago) 
                           
@@ -13,7 +16,10 @@
                   </th>
 
                   <td>
-                      <%= link_to image_tag("edit.jpeg", alt: "Edit_#{review.id} ", width:30, height:30 , :border => 0), edit_share_review_path(@share,review) %>  
+                      <%= link_to image_tag("edit.jpeg", alt: "Edit_#{review.id}", width:30, height:30 , :border => 0, title: "Edit"), edit_share_review_path(@share,review) %>  
+                  </td>
+                   <td>
+                      <%= link_to image_tag("delete4.jpeg", alt: "delete_#{review.id}", width:20, height:20 , :border => 0, title: "Delete"), share_review_path(@share,review), method: :delete, data:{confirm: 'Are you Sure?'} %>  
                   </td>
                 </tr>
                <% end %>
@@ -21,19 +27,41 @@
               <br>
               
                
-                  <tr> <th colspan=4 align=center> Add a new Review : </th></tr>
-                  <tr> <td>
-                    <%= form_for([@share,@reviewToAlter])   do |f| %>
-                        
-                         <strong> <padding=5><%= f.label :full_name %> :</padding></strong>
-                          <%= f.text_field :name, autofocus: true %>
-                        
-                          <strong><%= f.label :priority %> :</strong>
-                          <%= f.select :priority, Review::PRIORITY, prompt: "Pick one" %> <br>
-                          <strong><%= f.label :comment %> :</strong>
-                          <%= f.text_area :comment, cols: 80 %><br>
-                          <%= f.submit %>
-                   <% end %>
+                  <tr> <th colspan=6 align=center> Add a new Review : </th></tr>
+                 
+                     <tr> <td colspan=6 >
+                      <div class="table">
+                      <%= form_for([@share,@reviewToAlter]) do |f| %>
+                      
+                       <div class="tr">  
+                           <span class="th"> <%= f.label :name %> :
+                           </span>
+                           <span class="td">
+                            <%= f.text_field :name, autofocus: true %>
+                           </span>
+                       </div>
+                       <div class="tr">
+                           <span class="th">
+                            <%= f.label :priority %> :
+                           </span>
+                           <span class="td">
+                            <%= f.select :priority, Review::PRIORITY, prompt: "Pick one" %> 
+                          </span>
+                        </div>
+                        <div class="tr">
+                          <span class="th">
+                            <strong><%= f.label :comment%>:</strong>
+                          </span>
+                          <span class="td">
+                            <%= f.text_area :comment, cols: 80 %><br>
+                          </span>
+                        </div>
+                        <div class = "tr">
+                            <%= f.submit %>
+                        </div>
+                      
+                     <% end %>
+                    </div>
                   </td></tr> 
             </table>
           </ul>
