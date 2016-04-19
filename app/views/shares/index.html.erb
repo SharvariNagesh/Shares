@@ -9,9 +9,9 @@
           <h2><%= link_to share.name, share %> </h2>
           
         </header>
-        <p>
+        <p class="message">
            
-          <h3><%= truncate(share.description , length: 150, separator: ' ') %></h3>
+          <%= truncate(share.description , length: 150, separator: ' ') %>
 
         </p>
         <table>

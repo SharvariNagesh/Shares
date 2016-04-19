@@ -3,8 +3,8 @@
           <h2><%= @share.name %> </h2>
           
         </header>
-        <p>
-          <h3><%= @share.description %></h3>
+        <p class="message">
+          <%= @share.description %>
 
         </p>
         <table>
@@ -45,10 +45,8 @@
       </article>
       <article>
       <br>
-        <% if @reviews.empty? %>
+        <% unless @reviews.empty? %>
       
-           <h3> <strong>There are no reviews for <%=@share.name %> </strong></h3>
-        <% else%>
            <h3> <strong>Top reviews for <%=@share.name %> </strong></h3>
                
         <%end %>
@@ -60,7 +58,7 @@
 
       <br>
 
-    <%= link_to " All Reviews ", share_reviews_path(@share) %>
+    <%= link_to " All Reviews ", share_reviews_path(@share)%>
 
     
     <%=   link_to "Delete", share_path(@share), method: :delete, data:{confirm: 'Are you Sure?'} %>

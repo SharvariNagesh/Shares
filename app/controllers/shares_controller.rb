@@ -1,8 +1,14 @@
 class SharesController < ApplicationController
 
- def index
+  def index
   	@shares = Share.all
 
+  end
+
+  def about
+  end
+  
+  def contact
   end
 
   def show

@@ -1,16 +1,20 @@
 
 <h1>Enter a Money control URL to pull the data : </h1>
-
-<%= form_for(@share)	 do |f| %>
-  <p>
-    <li class="required">
-         <%= f.label :url %>
-        <%= f.text_field :url, autofocus: true %>
-        
-    </li>
-  </p>
-   <p>
-    <%= f.submit 'Pull the data'%>
-  </p>
-  
+<br>   <p class="commentsbox">
+	  Using this option, basic financial data of listed companies can be pulled from financial websites. This website currently supports pulling data from "www.moneycontrol.com" website only. For a list of shares, please <%= link_to "click here", "http://www.moneycontrol.com/india/stockmarket/pricechartquote/A" %> , select any company name, copy its url and paste it in the URL text box. Basic data will be pulled from the moneycontrol website into this application.
+</p> <br>
+<%= form_for(@share) do |f| %>
+    <div class="table">
+      <div class="tr">
+      	<span class="th">
+         <%= f.label :url %> :
+     	</span>
+        <span class="td">
+        	<%= f.text_field :url, autofocus: true %>
+        </span>
+      </div>
+      <div class="tr">
+    	<%= f.submit 'Pull the data'%>
+      </div>
+    </div>  
 <% end %>
