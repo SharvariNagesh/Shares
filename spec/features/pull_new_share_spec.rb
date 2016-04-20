@@ -23,4 +23,34 @@ describe "Pulling a new share" do
         expect(page).to have_text("FOOD PROCESSING")
 
     end
+
+    it "prints an error message when invalid url is entered" do
+
+        visit new_share_path
+        fill_in('Url', :with=>'ABCD')
+        click_button('Pull the data')
+
+        expect (current_path).to eq(new_share_path)
+        expect(page).to have_text('Error:Invalid URL')
+    end
+
+
+    it "prints an error message when Non Moneycontrol url is entered" do
+
+        visit new_share_path
+        fill_in('Url', :with=>'http://notMoneycontrol.com')
+        click_button('Pull the data')
+
+        expect (current_path).to eq(new_share_path)
+        expect(page).to have_text('Error:Invalid URL')
+    end
+
+    it "prints an alert message when moneycontrol url without a proper data is entered" do
+        visit new_share_path
+        fill_in('Url', :with=>'')
+        click_button('Pull the data')
+
+        expect (current_path).to eq(new_share_path)
+        expect(page).to have_text('Error:Not a traded share')
+    end
 end
