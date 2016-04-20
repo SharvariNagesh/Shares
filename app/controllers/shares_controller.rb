@@ -5,6 +5,11 @@ class SharesController < ApplicationController
 
   end
 
+  def sector
+    @sector = params[:sector]
+    @shares = Share.where(sector: params[:sector])
+  end
+
   def about
   end
   
@@ -31,9 +36,9 @@ class SharesController < ApplicationController
     @url = sanitize_website(params[:share][:url])
     @shareNew = Share.new(share_params)
     @share_details = readShareBasic(@url)
-    @shareNew.name = @share_details[:name]
+    @shareNew.name = (@share_details[:name]).to_s
     @shareNew.current_price = @share_details[:current_price]
-    @shareNew.sector=@share_details[:sector]
+    @shareNew.sector=(@share_details[:sector]).to_s
     @shareNew.description=@share_details[:description]
     @shareNew.year_low=@share_details[:year_low]
     @shareNew.year_high=@share_details[:year_high]

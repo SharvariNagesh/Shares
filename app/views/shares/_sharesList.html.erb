@@ -1,0 +1,54 @@
+
+<ul>
+<% @shares.each do |share| %>
+	
+<li>
+      <article >
+        <header>
+          <h2><%= link_to share.name, share %> </h2>
+          
+        </header>
+        <p class="message">
+           
+          <%= truncate(share.description , length: 150, separator: ' ') %>
+
+        </p>
+        <table>
+           <tr>
+            <th>Sector:</th>
+            <td><%= link_to share.sector, sector_shares_path(share.sector) %></td>
+          </tr>
+          <tr>
+            <th>Current price :</th>
+            <td><%= share.current_price %></td>
+          </tr>
+          <tr>
+            <th>52 week low :</th>
+            <td><%= share.year_low %></td>
+          </tr>
+          <tr>
+            <th>52 week High :</th>
+            <td><%= share.year_high %></td>
+          </tr>
+            <tr>
+            <th>P/E :</th>
+            <td><%= share.current_PE_ratio %></td>
+          </tr>
+          <tr>
+            <th>Market Cap :</th>
+            <td><%= share.market_cap %></td>
+          </tr>
+          <tr>
+            <th>Book Value: </th>
+            <td><%= share.book_value %></td>
+          </tr>
+          <tr>
+            <th>P/B :</th>
+            <td><%= share.price_to_book_value %></td>
+          </tr>
+    
+        </table>
+    </article>
+</li>
+<%end%>
+</ul>

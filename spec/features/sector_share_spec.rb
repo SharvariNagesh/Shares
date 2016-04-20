@@ -12,8 +12,8 @@ describe "Vieweing the sector of shares" do
        	click_button('Pull the data')
 
 		expect(page).to have_text("Nestle")
-		click_link "Food Processing"
-		expect(page).to have_text("Shares in Food Processing Sector:")
+		click_link "FOOD PROCESSING"
+		expect(page).to have_text("Share In The FOOD PROCESSING Sector:")
 		expect(page).to have_text("Nestle")
 	    
 	end
