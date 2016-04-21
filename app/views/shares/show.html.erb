@@ -58,7 +58,7 @@
 
       <br>
 
-    <%= link_to " All Reviews ", share_reviews_path(@share)%>
+    <%= link_to " All Reviews ", share_reviews_path(@share), class: 'button ok'%>
 
     
-    <%=   link_to "Delete", share_path(@share), method: :delete, data:{confirm: 'Are you Sure?'} %>
+    <%=   link_to "Delete", share_path(@share), method: :delete, data:{confirm: 'Are you Sure?'}, class: 'button ok' %>

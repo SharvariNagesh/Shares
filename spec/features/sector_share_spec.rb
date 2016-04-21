@@ -5,7 +5,7 @@ describe "Vieweing the sector of shares" do
 	it "lists all the shares in the sector" do
 		
 		visit shares_url
-	    click_link "Pull Shares"
+	    click_link "Pull A New Share"
 	    expect(current_path).to eq(new_share_path)
 
 	    fill_in('Url', :with=>'http://www.moneycontrol.com/india/stockpricequote/food-processing/nestleindia/NI')

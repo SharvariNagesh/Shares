@@ -1,10 +1,10 @@
 			<div class="sd_right">
 				<div class="text_padding">
-					<h2>ShareAnalysis</h2> This is a website which analyses shares based on their financial statements, and calculates a score for each share.
-							
+					<h2>ShareAnalysis</h2> This is a website which retreives basic share information from financial websites(currently, Moneycontrol.com is supported). Using this website, basic share information, sectorwise share information can be viewed. For each share, reviews can be added.
+							<br> <br>
 						
 					<h2>Links</h2>
-					<a> <%= link_to 'Pull Shares', new_share_path%> </a><br />
-					<%=   link_to "All Shares", shares_path %><br />
+					<a> <%= link_to 'Pull A New Share', new_share_path, class:'link'%> </a> <br>
+					<%=   link_to "All Shares", shares_path,  class:'link' %><br />
 				</div>
 			</div>
