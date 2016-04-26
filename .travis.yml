@@ -1,0 +1,32 @@
+language: ruby
+rvm:
+  - 1.9.3
+  - 2.0.0
+  - 2.1.2
+gemfile:
+  - gemfiles/Gemfile.rails-3.1.x
+  - gemfiles/Gemfile.rails-4.2.5
+  - gemfiles/Gemfile.rails-edge
+
+env:
+  - DB=sqlite
+ 
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - RAILS_ENV=test bundle exec rspec -f d
+
+install:
+  - bundle install
+
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  api_key:
+    secure: WkbizCAjYsgcNvV81eU7DutJ33jOsKVqaKl0xSyEvfqhcRtRAVpaWdsu0dQMO3Tn4Qs6ygB24kiHIkPBM5vbhWYf4gogUgZh56M5Zz2vGP/rjypABapOeFB8hefghtn9jgvTRrEKZ4E7dHD1EbZbAy7asMexqEdthJCh3J3M/L3liWEhVumQef+SxfBAEZJGPDmCvKw/vWhZBHKimAfPmyh7NhPgMCQzu3/Qu2Js29IdFsT0BV6hKrfXn4aam0vny3iLgza6+I2dxTVH21do5+RhUvm1x5Up1OE143xLkSSzTe9z/fP9oQndPnN+RH8O9l1Nrilku3oVvpIEBTIcvar5c9lIseVstREjWQUVpvVGVhiRWRatV7dTddGaZVsXCHhMut6sQ0Qm/1HVngYBaUb4ctIO3IZaruZXCEEYTVuLMQtvY8j9IzqSU4jX+JTV2wDTC6ji7nUgkVoGvZ5MuS3ZNxVQxwg/V64KJ9PjK48mERNMJkjwnpuhh9N9ShClecIsOFIIhC/t5MM4Lo1RnoqIq5yHHeJvtYn0Sj90pKUVoonucDNEdyajZ8Bgj7F458VNzFBbT51zG37wXtHsTYkaixbV2sL1Pyg+3iVtl2vdl0OTcG1em/BuxiCSa048i57byjQAHte//GTdRY3vSgxJLlLZrY4krjmh8euboqU=
+
+  strategy: git
+  run:
+    - "rake db:migrate"
+  
+
