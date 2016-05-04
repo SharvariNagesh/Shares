@@ -23,7 +23,7 @@ Shares
 &nbsp;&nbsp;&nbsp; Each review for a share has a name, priority and comments in it. Reviews are sorted based on the priority. Any business data, company information, observations or comments helpful to take an investment decision can be added in the review section. Reviews can also be edited or deleted.
      
 **ENVIRONMENT AND COMPATIBILITY:**
-&nbsp;&nbsp;&nbsp;This web application is developed on a ubuntu 14.04 LTS system with Ruby version 2.2.3 and rails version 4.2.5. The application is successfully tested with rails 3.1.x, 4.2.5 and Rails edge.  Recommendation is to use Ruby version 2.0 or above, since Rails 4 prefers Ruby 2.0 and requires 1.9.3 or newer. If one has plan to upgrade, please refer to http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html. 
+&nbsp;&nbsp;&nbsp;This web application is developed on a ubuntu 14.04 LTS system with Ruby version 2.2.3 and rails version 4.2.5. The application is successfully tested with rails 4.2.5 and Rails edge.  Recommendation is to use Ruby version 2.0 or above, since Rails 4 prefers Ruby 2.0 and requires 1.9.3 or newer. If one has plan to upgrade, please refer to http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html. 
        This application is known to be incompatible with IE7 and below. For a list of web servers supported, please refer to "Browser support" section of this page:  http://www.w3schools.com/cssref/pr_class_display.asp
 
 **PROCEDURE TO INSTALL AND RUN THE CODE:**
@@ -40,15 +40,25 @@ Shares
 	      
     By default Sqlite database is used with the application. 
  -  Install all the required gem file for the project.
-	         $ *bundle install*
+              
+          $ bundle install
+              
  - Migrate the db by running the below command :
-		 $ *rake db:migrate*
+		 
+	    $ rake db:migrate
+		 
+ - To run the test suit, type below command:
+		
+	    $ bundle exec rspec
+
  - Start the web server provided along with rails as below
-                $ *rails s*
+            
+        $ rails s
  - Open the browser and type the url: localhost:3000 to open the web application.
 
 **DESIGN DISCUSSIONS:**
-&nbsp;&nbsp;&nbsp;The application uses two tables for storing the data used by the application. One for storing basic information of the share(name, sector, current market price, P/E, P/B, Book value, 52 week low/high and market cap) and the other for storing reviews(name, priority and comment). There is a one to many relation between the two tables. There can be multiple reviews for each share. Everytime reviews are listed, they will be sorted based on priority.
+&nbsp;&nbsp;&nbsp;The application uses two tables for storing the data used by the application. One for storing basic information of the share(name, sector, current market price, P/E, P/B, Book value, 52 week low/high and market cap) and the other for storing reviews(name, priority and comment). There is a one to many relation between the two tables. There can be multiple reviews for each share. Everytime 
+reviews are listed, they will be sorted based on priority.
 
 &nbsp;&nbsp;&nbsp;For Extracting a new share data into the application, use the "*Extract Share Data*" link on the side bar. URL from moneycontrol website for the share has to be entered in the "URL:"  text box.  The URL entered by the user is not stored in the database. The reason for this is, in the next phase, a table containing all the names of the share and their URLs will be stored in a separate table. So to avoid duplication, in the current version, URL is not being stored in the database. But without having URL as part of the share data it can not be used in the view as form parameter. To facilitate retrieval of URL, it has been added as part of the model as a variable as shown below.
 

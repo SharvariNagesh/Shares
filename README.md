@@ -23,7 +23,7 @@ Shares
 &nbsp;&nbsp;&nbsp; Each review for a share has a name, priority and comments in it. Reviews are sorted based on the priority. Any business data, company information, observations or comments helpful to take an investment decision can be added in the review section. Reviews can also be edited or deleted.
      
 **ENVIRONMENT AND COMPATIBILITY:**
-&nbsp;&nbsp;&nbsp;This web application is developed on a ubuntu 14.04 LTS system with Ruby version 2.2.3 and rails version 4.2.5. The application is successfully tested with rails 4.2.5 and Rails edge.  Recommendation is to use Ruby version 2.0 or above, since Rails 4 prefers Ruby 2.0 and requires 1.9.3 or newer. If one has plan to upgrade, please refer to http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html. 
+&nbsp;&nbsp;&nbsp;This web application is developed on a ubuntu 14.04 LTS system with Ruby version 2.2.3 and rails version 4.2.5. The application is successfully tested with rails 4.2.5.  Recommendation is to use Ruby version 2.0 or above, since Rails 4 prefers Ruby 2.0 and requires 1.9.3 or newer. If one has plan to upgrade, please refer to http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html. 
        This application is known to be incompatible with IE7 and below. For a list of web servers supported, please refer to "Browser support" section of this page:  http://www.w3schools.com/cssref/pr_class_display.asp
 
 **PROCEDURE TO INSTALL AND RUN THE CODE:**
