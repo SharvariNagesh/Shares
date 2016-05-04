@@ -1,0 +1,562 @@
+/* line 3, /home/sharvari/rails_project/shares/app/assets/stylesheets/buttons.css.scss */
+a.button {
+  display: inline-block;
+  border: 1px #c2c2c2 solid;
+  border-radius: 4px;
+  padding: 4px 6px;
+  text-decoration: none;
+}
+/* line 9, /home/sharvari/rails_project/shares/app/assets/stylesheets/buttons.css.scss */
+a.button:hover {
+  background-color: #c2c2c2;
+  text-shadow: 0;
+  text-decoration: underline;
+}
+/* line 14, /home/sharvari/rails_project/shares/app/assets/stylesheets/buttons.css.scss */
+a.button.ok {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 10px 19px;
+  background: -moz-linear-gradient(top, #424242 0%, #101907);
+  background: -webkit-gradient(linear, left top, left bottom, from(#424242), to(#101907));
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #A4A4A4;
+  -moz-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5), inset 0px 0px 1px white;
+  -webkit-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5), inset 0px 0px 1px white;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5), inset 0px 0px 1px white;
+  text-shadow: 0px -1px 0px transparent, 0px 1px 0px rgba(255, 255, 255, 0);
+}
+/*
+By Herreman David
+http://www.free-css-templates.com
+StyleSheet for BinaryNews Template
+*/
+/* line 13, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 14, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+body {
+  background-color: #e7e7e7;
+  color: #FFF;
+  padding: 0;
+  margin: 0;
+  font: 0.7em Arial, sans-serif;
+  line-height: 1.5em;
+}
+
+/* line 20, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+a {
+  color: #46574D;
+  background: inherit;
+}
+
+/* line 21, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+a:hover {
+  color: #647B6D;
+  background: inherit;
+}
+
+/* line 23, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+h1 {
+  font: bold 2em Arial, Sans-Serif;
+  letter-spacing: -1px;
+  padding: 16px 0 0 8px;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+/* line 24, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+h2 {
+  margin: 0;
+  padding: 0;
+  font: normal 1.6em Arial, Sans-Serif;
+  letter-spacing: -1px;
+}
+
+/* line 25, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+h1 a {
+  color: #46574D;
+  background: inherit;
+}
+
+/* line 26, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+h1 a, h2 a {
+  text-decoration: none;
+}
+
+/* line 27, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+h1 a:hover, h2 a:hover {
+  color: #BFE1ED;
+  background: inherit;
+}
+
+/* line 28, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+h3 {
+  font: 9 0% Arial, Sans-Serif;
+  margin: 0 0 12px 0;
+  padding: 0;
+  color: #46574D;
+  background: #FFF;
+}
+
+/* line 30, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+p {
+  margin: 0 0 0px 0;
+  line-height: 1.5em;
+}
+
+/* line 34, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.message {
+  background-color: #FFF;
+  padding: 5px 0 5px 0;
+  color: #2F5F5F;
+  font: bold 1.2em Arial, sans-serif;
+}
+
+/* line 42, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.link {
+  background-color: #FFF;
+  padding: 0px 0px 0px 0px;
+  color: #6FA9A9;
+  font: bold 1.2em Arial, sans-serif;
+}
+
+/* line 50, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+form {
+  margin: 0;
+}
+
+/* line 51, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+DIV.table {
+  display: table;
+}
+
+/* line 55, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+FORM.tr, DIV.tr {
+  display: table-row;
+}
+
+/* line 59, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+SPAN.td {
+  display: table-cell;
+}
+
+/* line 64, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+SPAN.th {
+  display: table-cell;
+  font: bold 1.2em Arial, sans-serif;
+}
+
+/* line 69, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+input.search {
+  width: 122px;
+  height: 15px;
+  border: 1px dashed #46574D;
+  background: #FFF url(input.jpg) no-repeat;
+  padding: 3px;
+  color: #616161;
+}
+
+/* line 70, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+input.submit {
+  width: 28px;
+  height: 20px;
+  font-weight: bold;
+  border: none;
+  background: #FFF;
+  padding: 3px;
+  color: #616161;
+}
+
+/* line 74, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+div .comment {
+  border-style: ridge;
+  border-width: 1px 4px;
+  width: 70%;
+  padding-top: 5px;
+  padding-right: 30px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+  align: left;
+}
+/* line 87, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+div .priority1 {
+  background-color: #8da595;
+  border-style: thin;
+  color: Black;
+  margin: 2px;
+  padding: 0px;
+  font: bold 1.2em Arial, sans-serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+/* line 98, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+div .priority2 {
+  background-color: #d4ddd7;
+  border-style: thin;
+  color: Black;
+  margin: 2px;
+  padding: 2px;
+  font: bold 1em Arial, sans-serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+/* line 108, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+div .priority3 {
+  background-color: #f1f4f2;
+  border-style: thin;
+  color: Black;
+  margin: 5px;
+  padding: 2px;
+  font: bold 1em Arial, sans-serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* line 119, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.content {
+  position: absolute;
+  height: 100%;
+  background: #FFF;
+  margin: 0 auto;
+  padding: 0px;
+  width: 1286px;
+  color: #000;
+}
+
+/* line 129, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.preheader {
+  background: #055 url(header.jpg) no-repeat center bottom;
+  color: #FFF;
+  width: 1286px;
+  height: 8%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 138, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.preheader a {
+  color: #FFF;
+  background: inherit;
+  text-decoration: none;
+}
+
+/* line 139, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.preheader a:hover {
+  color: #FFF;
+  background: inherit;
+}
+
+/* line 141, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.preheader .padding {
+  float: right;
+  padding: 52px 70px 0 0;
+  color: #FFF;
+}
+
+/* line 148, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.header {
+  background: #000 url(header.jpg) no-repeat center bottom;
+  color: #FFF;
+  width: 1286px;
+  height: 13%;
+  margin: 0;
+  padding: 0;
+}
+/* line 157, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.header .title {
+  float: centre;
+  padding: 32px 0 0 204px;
+  color: #FFF;
+  font: bold 1.8em Arial, sans-serif;
+}
+/* line 164, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.header .slogan {
+  float: left;
+  padding: 2px 0 0 84px;
+  color: #FFF;
+  font: bold 0.8em Arial, sans-serif;
+}
+
+/* line 172, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+#nav {
+  background: #000 url(menu.jpg) no-repeat center bottom;
+  background-color: #000;
+  width: 1286px;
+  height: 5%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 181, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+#nav ul {
+  margin: 0;
+  list-style: none;
+  padding: 0px 0 0 76px;
+}
+
+/* line 182, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+#nav a, #nav strong, #nav span {
+  float: left;
+  display: block;
+  color: #fff;
+  padding: 5px 10px 5px 10px;
+  background: #9e9e9e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* line 183, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+#nav a {
+  float: none;
+}
+
+/* line 184, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+#nav li {
+  float: left;
+  color: #FFF;
+  background: #9e9e9e;
+  margin: 0;
+  padding: 0 0 0 0px;
+}
+
+/* line 185, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+#nav #current {
+  float: left;
+  background: #aeaeae;
+  color: #FFF;
+}
+
+/* line 186, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+#nav #current a {
+  float: left;
+  background: #aeaeae;
+  padding: 5px 10px 5px 10px;
+  color: #FFF;
+}
+
+/* line 187, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+#nav a:hover {
+  float: left;
+  color: #FFF;
+  background: #aeaeae;
+}
+
+/* line 188, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+#nav .padding {
+  padding: 5px 0 0 10px;
+  font-weight: bold;
+}
+
+/* line 191, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.main_content {
+  background-color: #FFF;
+  margin: 0 auto;
+  padding: 0px;
+  height: 77%;
+  overflow: auto;
+  width: 1286px;
+}
+
+/* line 202, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.sd_left {
+  background-color: #FFF;
+  color: #000;
+  margin: 0 0 0px 80px;
+  padding: 0px 20px 0px 5px;
+  width: 1000px;
+}
+
+/* line 212, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.sd_right {
+  clear: both;
+  background-color: #FFF;
+  float: right;
+  color: #000;
+  margin: 0 25px 0 0;
+  padding: 0px 0px 0 5px;
+  width: 170px;
+  border-left: 1px dashed #ccc;
+}
+
+/* For IE... */
+/* line 224, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+* html .sd_right {
+  clear: both;
+  background-color: #FFF;
+  float: right;
+  color: #000;
+  margin: 0 40px 0 0;
+  padding: 0px 0px 0 15px;
+  width: 170px;
+  border-left: 1px dashed #ccc;
+}
+
+/* line 236, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.text_padding {
+  padding: 15px 0 0 0;
+}
+
+/* line 240, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.main_content h2 {
+  background-color: #FFF;
+  padding: 5px 0 5px 0;
+  color: #46574D;
+  font: bold 2em Arial, sans-serif;
+}
+
+/* line 247, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.priority3 h2 {
+  background-color: #FFF;
+  padding: 5px 0 5px 0;
+  color: #46574D;
+  font: bold 2em Arial, sans-serif;
+}
+
+/* line 254, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.date {
+  color: #46574D;
+  background: #FFFFFF;
+  text-align: right;
+  margin: 10px 0 5px 0;
+  padding: 0.4em 0 0 0;
+  border-top: 1.6px solid #eee;
+}
+
+/* line 263, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+input.button {
+  background: #FFFFF4;
+  color: #808080;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 270, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.comments {
+  padding: 10px 10px 8px 10px;
+  margin: 0 0 7px 0;
+  background: #f8f8f8;
+  color: #000;
+}
+
+/* line 277, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.commentsbox {
+  width: 70%;
+  padding: 8px 0 10px 10px;
+  margin: 0 0 10px 0;
+  background: #f4f4f4;
+  color: #2F5F5F;
+  font: bold 1.2em Arial, sans-serif;
+}
+
+/* line 285, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.error {
+  color: #990000;
+  background-color: #FFF0F0;
+  padding: 7px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px dashed #990000;
+}
+
+/* line 293, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.error h2 {
+  color: #990000;
+  background: inherit;
+}
+
+/* line 298, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.success {
+  color: #000000;
+  background: #ebfbe1;
+  font: bold 1.2em Arial, sans-serif;
+  text-align: center;
+  width: 70%;
+  padding: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border: 1px dashed #7BA813;
+}
+
+/* line 309, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.success h2 {
+  text-align: center;
+  background: #ebfbe1;
+  color: #7BA813;
+}
+
+/* line 316, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.footer {
+  background: #000;
+  width: 1286px;
+  height: 5%;
+  color: #555;
+  font-size: 90%;
+  text-align: center;
+  clear: both;
+}
+/* line 324, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.footer .padding {
+  padding: 10px 0 0 0;
+}
+
+/* FLASHES */
+/* line 333, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.flash {
+  color: #444;
+  font: bold 1.2em Arial, sans-serif;
+  width: 80%;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  box-shadow: #ffc 0 0 4px;
+}
+/* line 344, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.flash.notice {
+  background-color: #DBFFDD;
+  border: 1px dashed #7BA813;
+}
+/* line 349, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+.flash.alert {
+  background-color: #FFE1DE;
+  border: 1px dashed #990000;
+}
+
+/* ERRORS */
+/* line 357, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+section#errors {
+  margin: 1em 0;
+  padding: 1em;
+  background: #FFC;
+}
+/* line 362, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+section#errors h2 {
+  color: #DC3D3D;
+  font-size: 1.25em;
+}
+/* line 367, /home/sharvari/rails_project/shares/app/assets/stylesheets/style.css.scss */
+section#errors h3 {
+  font-size: 1em;
+  margin: .5em 0;
+  font-weight: bold;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ *= require_buttons
+ */
+

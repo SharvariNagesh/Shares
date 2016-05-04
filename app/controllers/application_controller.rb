@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
   protected
 
+#This is a routine to extract basic share data from Moneycontrol website.
   def readShareBasic(shareLink)
 
     require 'open-uri'

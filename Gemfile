@@ -38,6 +38,10 @@ gem 'will_paginate'
 #nokogiri 
 gem 'nokogiri'
 
+#serve static assets gem to fix static asset serving problem in rails 4
+gem 'rails_serve_static_assets'
+gem 'rails_stdout_logging' 
+
 group :production do 
 	gem 'pg'
 end
