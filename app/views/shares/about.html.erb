@@ -1,15 +1,26 @@
 
 <h1>About The Project: </h1>
 <br>
-   <p class="commentsbox">
-	   This application is developed to demonstrate competency in Ruby on Rails programming. This is an application, which lists shares and pulls share data from a financial website. Reviews can be added/deleted/modified for each share. This website supports pulling data from www.moneycontrol.com. MoneyControl is a financial website listing shares from NSE/BSE(Indian stock markets).
-	</p>
-	   <br>
-	<p class="commentsbox">	
-	   This application pulls basic financial data like current share price, year's lowest and highest share prices, Sector, Price to Equity ratio(P/E), current Market Capital(Market Cap), Book Value, Price to Book value(P/B).
-	</p>
-	   <br>
-	<p class="commentsbox">
-	   Future plan is to pull balance sheet data and use it to analyse and rate each share. Which is yet to be implemented.
+<p class="commentsbox">
+   &nbsp;&nbsp;&nbsp;"Share Analysis and Scoring" is an application to aid value investors analyse financial data of shares to make an investment decision.  Users of this application can extract financial data of any traded share and compare it with other shares from the same sector or with shares from different sectors. 
+</p>
+<p class="commentsbox">
+	&nbsp;&nbsp;&nbsp;This application currently can extract only the basic financial data like name of the stock, information about the share, current market value, market capital, P/E(Price to earnings), Book value, P/B(Price to book value) 52 week high/low and sector  for any traded share from a financial website. Future plan is to extract entire financial data including balance sheet, profit and loss statements, cashflow data and analyse it in more detail. This web application can read basic data from Moneycontrol.com, a financial web  site for shares traded in Indian stock market. Users can also write/edit/delete their reviews/comments for each share. 
+</p> 
+<p class="commentsbox">
+	&nbsp;&nbsp;&nbsp;On the right hand side there is a side bar with description of the application and 2 links for extracting share data and to view all the share data in the database. By using the "Extract Share Data" link, users can retrieve the financial data of a share into the application database. To extract the data, click on the "Click here" link of the page, select a company you want the data to be extracted, copy its URL and paste it in the URL text box provided. Basic data will be extracted from the Moneycontrol website into this application. If a record for the share is already present in the database, then record will be updated with latest values. 
+</p> 
+<p class="commentsbox">
+	&nbsp;&nbsp;&nbsp;When you click on "All Shares", All the shares in the database will be displayed. Per page, only 10 shares will be displayed and one can navigate to next page using the pagination provided at the bottom of the page. 
+</p> 
+<p class="commentsbox">
+	&nbsp;&nbsp;&nbsp; Each share belongs to a sector. If one wishes to view shares belonging to that particular sector, they can click on the sector name in the share data. All the shares from the sector will be displayed. 
+</p> 
+<p class="commentsbox">
+	&nbsp;&nbsp;&nbsp;To view details about a share, click on the name of the share. A web page with detailed information about the share will be displayed. The detail page or show page will have complete information about the share and top 3 review comments sorted by priority. Show page also provides features to delete the share or go back to "All Shares" page, index page containing all the share details. It also provides a link to view all the reviews for the share.
+</p> 
+<p class="commentsbox">
+	&nbsp;&nbsp;&nbsp; Each review for a share has a name, priority and comments in it. Reviews are sorted based on the priority. Any business data, company information, observations or comments helpful to take an investment decision can be added in the review section. Reviews can also be edited or deleted.
+ 
 
-	</p> 
+</p> 

@@ -80,6 +80,7 @@ div{
     	padding-bottom: 3px;
     	padding-left: 30px;
     	align: left;
+
 	}
 
  .priority1 
@@ -87,8 +88,10 @@ div{
     background-color:#8da595;
     border-style: thin;
     color:Black;
-    margin:5px;
-    padding:5px;
+    margin:2px;
+    padding:0px;
+    font: bold 1.2em Arial, sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
   }
 
   .priority2
@@ -96,8 +99,10 @@ div{
     background-color:#d4ddd7;
     border-style: thin;
     color:Black;
-    margin:5px;
-    padding:5px;
+    margin:2px;
+    padding:2px;
+    font: bold 1em Arial, sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
   }
   .priority3
   {
@@ -105,7 +110,9 @@ div{
     border-style: thin;
     color:Black;
     margin:5px;
-    padding:5px;
+    padding:2px;
+    font: bold 1em Arial, sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
   }
 } 
 .content { 

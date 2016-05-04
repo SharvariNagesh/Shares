@@ -1,13 +1,13 @@
 class SharesController < ApplicationController
 
   def index
-  	@shares = Share.paginate(:page=>params[:page], :per_page=>5)
+  	@shares = Share.paginate(:page=>params[:page], :per_page=>10)
 
   end
 
   def sector
     @sector = params[:sector]
-    @shares = Share.where(sector: params[:sector]).paginate(:page=>params[:page], :per_page=>5)
+    @shares = Share.where(sector: params[:sector]).paginate(:page=>params[:page], :per_page=>10)
   end
 
   def about

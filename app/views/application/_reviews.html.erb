@@ -19,7 +19,7 @@
                       <%= link_to image_tag("edit.jpeg", alt: "Edit_#{review.id}", width:30, height:30 , :border => 0, title: "Edit"), edit_share_review_path(@share,review) %>  
                   </td>
                    <td>
-                      <%= link_to image_tag("delete4.jpeg", alt: "delete_#{review.id}", width:20, height:20 , :border => 0, title: "Delete"), share_review_path(@share,review), method: :delete, data:{confirm: 'Are you Sure?'} %>  
+                      <%= link_to image_tag("delete.jpeg", alt: "delete_#{review.id}", width:20, height:20 , :border => 0, title: "Delete"), share_review_path(@share,review), method: :delete, data:{confirm: 'Are you Sure?'} %>  
                   </td>
                 </tr>
                <% end %>
