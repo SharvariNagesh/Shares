@@ -31,6 +31,5 @@ deploy:
   strategy: git
   run:
     - "rake db:migrate"
-    - "rake assets:precompile"
   
 
